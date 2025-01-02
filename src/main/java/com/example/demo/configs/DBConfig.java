@@ -30,7 +30,9 @@ public class DBConfig
     {
         DataSource dataSource=null;
 
-        try {
+        try
+        {
+
             dataSource= DataSourceBuilder.create()
                     .url(dbURL)
                     .username(username)

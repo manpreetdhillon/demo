@@ -28,18 +28,18 @@ public class DBConfig
     @Bean
     public DataSource dataSource() throws Exception
     {
-        DataSource dataSource=null;
+        DataSource dataSource1=null;
 
         try
         {
 
-            dataSource= DataSourceBuilder.create()
+            dataSource1= DataSourceBuilder.create()
                     .url(dbURL)
                     .username(username)
                     .password(password)
                     .driverClassName(dbDriver)
                     .build();
-            dataSource.getConnection().isValid(10);
+            dataSource1.getConnection().isValid(10);
             //log.info("DB Connection is established successfully");
         }
         catch (Exception e)
@@ -47,6 +47,6 @@ public class DBConfig
             System.out.println("DB connection have some issue" + e);
             System.exit(0);
         }
-        return dataSource;
+        return dataSource1;
     }
 }
